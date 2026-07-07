@@ -1,6 +1,8 @@
 # Crusader Extensions
 
-Curated marketplace extensions for Crusader Proxy.
+Curated marketplace extensions for [Crusader Proxy](https://crusaderproxy.com/), the local-first web security proxy built for modern bug hunting.
+
+Official docs: [crusaderproxy.com/docs](https://crusaderproxy.com/docs/)
 
 The `ext/` directory mirrors the public marketplace surface at `https://crusaderproxy.com/ext/`. Marketplace install commands use those stable Crusader URLs. This repository exists so users and agents can inspect source, diff changes, and submit issues before installing.
 

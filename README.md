@@ -1,21 +1,23 @@
 # Crusader Extensions
 
-Community extensions for Crusader Proxy.
+Curated marketplace extensions for Crusader Proxy.
 
-Each plugin is a single JavaScript file that Crusader can preview and install directly from a URL. The published catalog is intentionally simple: read the source, preview the capability manifest, then install only what you approve.
+The `ext/` directory mirrors the public marketplace surface at `https://crusaderproxy.com/ext/`. Marketplace install commands use those stable Crusader URLs. This repository exists so users and agents can inspect source, diff changes, and submit issues before installing.
+
+Arbitrary plugins are still supported, but they are manual installs: users can preview/install any trusted raw URL or local `.js` file with the Crusader CLI or Extensions screen. Do not treat a local `plugins` folder as the marketplace.
 
 ## Install
 
 Preview before installing:
 
 ```powershell
-crusader plugin preview https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/jwt-inspector.js
+crusader plugin preview https://crusaderproxy.com/ext/jwt-inspector.js
 ```
 
 Install after review:
 
 ```powershell
-crusader plugin install https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/jwt-inspector.js
+crusader plugin install https://crusaderproxy.com/ext/jwt-inspector.js
 ```
 
 Some plugins only read local project data and run on Free. Plugins that raise findings, replay identities, use hosted Beacon, run active probes, or use transport sidecars require the relevant Hunter Pro capability. Crusader shows the requested capabilities before anything runs.
@@ -24,18 +26,18 @@ Some plugins only read local project data and run on Free. Plugins that raise fi
 
 | Plugin | File | Capability profile |
 | --- | --- | --- |
-| JWT Inspector | `plugins/jwt-inspector.js` | Free, local JWT decoder/editor tab |
-| Secret Scanner | `plugins/secret-scanner.js` | Hunter Pro findings |
-| IDOR Insertion Points | `plugins/idor-insertion-points.js` | Free scanner insertion point provider |
-| Security Header Audit | `plugins/security-headers.js` | Hunter Pro findings |
-| CORS Auditor | `plugins/cors-auditor.js` | Hunter Pro findings |
-| GraphQL Introspection Detector | `plugins/graphql-introspection.js` | Hunter Pro findings |
-| SSRF Target List | `plugins/ssrf-targets.js` | Free Intruder payload generator |
-| Base64 Payload Wrapper | `plugins/base64-payload-wrapper.js` | Free Intruder payload processor |
-| BlindSpot Beacon Hunter | `plugins/blindspot-beacon-hunter.js` | Hunter Pro Beacon and findings |
-| Fingerprint Flip | `plugins/fingerprint-flip.js` | Transport A/B, Hunter Pro findings |
-| Shadow Matrix | `plugins/shadow-matrix.js` | Hunter Pro identity replay and findings |
-| SSRF Cannon | `plugins/ssrf-cannon.js` | Hunter Pro Beacon and findings |
+| JWT Inspector | `ext/jwt-inspector.js` | Free, local JWT decoder/editor tab |
+| Secret Scanner | `ext/secret-scanner.js` | Hunter Pro findings |
+| IDOR Insertion Points | `ext/idor-insertion-points.js` | Free scanner insertion point provider |
+| Security Header Audit | `ext/security-headers.js` | Hunter Pro findings |
+| CORS Auditor | `ext/cors-auditor.js` | Hunter Pro findings |
+| GraphQL Introspection Detector | `ext/graphql-introspection.js` | Hunter Pro findings |
+| SSRF Target List | `ext/ssrf-targets.js` | Free Intruder payload generator |
+| Base64 Payload Wrapper | `ext/base64-payload-wrapper.js` | Free Intruder payload processor |
+| BlindSpot Beacon Hunter | `ext/blindspot-beacon-hunter.js` | Hunter Pro Beacon and findings |
+| Fingerprint Flip | `ext/fingerprint-flip.js` | Transport A/B, Hunter Pro findings |
+| Shadow Matrix | `ext/shadow-matrix.js` | Hunter Pro identity replay and findings |
+| SSRF Cannon | `ext/ssrf-cannon.js` | Hunter Pro Beacon and findings |
 
 ## Safety
 

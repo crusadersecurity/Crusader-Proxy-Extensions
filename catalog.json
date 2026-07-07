@@ -1,0 +1,134 @@
+[
+  {
+    "id": "jwt-inspector",
+    "name": "JWT Inspector",
+    "version": "1.0.0",
+    "file": "plugins/jwt-inspector.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/jwt-inspector.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/jwt-inspector.js",
+    "capabilities": ["history"],
+    "tier": "Free",
+    "description": "Adds a JWT tab to request detail: decode the header and claims, flag alg=none and expired tokens."
+  },
+  {
+    "id": "secret-scanner",
+    "name": "Secret Scanner",
+    "version": "1.0.0",
+    "file": "plugins/secret-scanner.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/secret-scanner.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/secret-scanner.js",
+    "capabilities": ["history", "scanner.findings"],
+    "tier": "Hunter Pro findings",
+    "description": "Scans response bodies for cloud keys, private-key blocks, and JWTs; raises a finding per hit."
+  },
+  {
+    "id": "idor-insertion-points",
+    "name": "IDOR Insertion Points",
+    "version": "1.0.0",
+    "file": "plugins/idor-insertion-points.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/idor-insertion-points.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/idor-insertion-points.js",
+    "capabilities": ["scanner"],
+    "tier": "Free",
+    "description": "Marks numeric IDs and id-like params as scanner fuzz points for authorization testing."
+  },
+  {
+    "id": "security-headers",
+    "name": "Security Header Audit",
+    "version": "1.0.0",
+    "file": "plugins/security-headers.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/security-headers.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/security-headers.js",
+    "capabilities": ["history", "scanner.findings"],
+    "tier": "Hunter Pro findings",
+    "description": "Flags HTML responses missing CSP, HSTS, X-Content-Type-Options, X-Frame-Options, or Referrer-Policy."
+  },
+  {
+    "id": "cors-auditor",
+    "name": "CORS Auditor",
+    "version": "1.0.0",
+    "file": "plugins/cors-auditor.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/cors-auditor.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/cors-auditor.js",
+    "capabilities": ["history", "scanner.findings"],
+    "tier": "Hunter Pro findings",
+    "description": "Flags wildcard or reflected Access-Control-Allow-Origin with credentials, and allowed null origins."
+  },
+  {
+    "id": "graphql-introspection",
+    "name": "GraphQL Introspection Detector",
+    "version": "1.0.0",
+    "file": "plugins/graphql-introspection.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/graphql-introspection.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/graphql-introspection.js",
+    "capabilities": ["history", "scanner.findings"],
+    "tier": "Hunter Pro findings",
+    "description": "Detects GraphQL endpoints that expose the introspection schema."
+  },
+  {
+    "id": "ssrf-targets",
+    "name": "SSRF Target List",
+    "version": "1.0.0",
+    "file": "plugins/ssrf-targets.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/ssrf-targets.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/ssrf-targets.js",
+    "capabilities": ["payloads"],
+    "tier": "Free",
+    "description": "An Intruder payload list of SSRF probe targets: loopback, cloud metadata, and parser-bypass encodings."
+  },
+  {
+    "id": "base64-payload-wrapper",
+    "name": "Base64 Payload Wrapper",
+    "version": "1.0.0",
+    "file": "plugins/base64-payload-wrapper.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/base64-payload-wrapper.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/base64-payload-wrapper.js",
+    "capabilities": ["payloads"],
+    "tier": "Free",
+    "description": "An Intruder payload processor that Base64-encodes every payload after the built-in rules."
+  },
+  {
+    "id": "blindspot-beacon-hunter",
+    "name": "BlindSpot Beacon Hunter",
+    "version": "1.0.0",
+    "file": "plugins/blindspot-beacon-hunter.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/blindspot-beacon-hunter.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/blindspot-beacon-hunter.js",
+    "capabilities": ["history", "network", "beacon", "scanner.findings"],
+    "tier": "Hunter Pro Beacon and findings",
+    "description": "Finds callback/server-side-fetch sinks passively, then proves blind bugs with Beacon callbacks when run actively."
+  },
+  {
+    "id": "fingerprint-flip",
+    "name": "Fingerprint Flip",
+    "version": "1.0.0",
+    "file": "plugins/fingerprint-flip.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/fingerprint-flip.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/fingerprint-flip.js",
+    "capabilities": ["history", "network", "transport", "scanner.findings"],
+    "tier": "Transport A/B, Hunter Pro findings",
+    "description": "Replays a request on default transport versus a browser JA3 fingerprint and flags TLS-based WAF bypass."
+  },
+  {
+    "id": "shadow-matrix",
+    "name": "Shadow Matrix",
+    "version": "1.0.0",
+    "file": "plugins/shadow-matrix.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/shadow-matrix.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/shadow-matrix.js",
+    "capabilities": ["history", "identity.signed-replay", "network", "scanner.findings"],
+    "tier": "Hunter Pro identity replay and findings",
+    "description": "Replays one captured request as every saved identity and diffs responses to surface IDOR/BOLA."
+  },
+  {
+    "id": "ssrf-cannon",
+    "name": "SSRF Cannon",
+    "version": "1.0.0",
+    "file": "plugins/ssrf-cannon.js",
+    "install": "https://raw.githubusercontent.com/crusadersecurity/extensions/main/plugins/ssrf-cannon.js",
+    "source": "https://github.com/crusadersecurity/extensions/blob/main/plugins/ssrf-cannon.js",
+    "capabilities": ["history", "network", "beacon", "scanner.findings"],
+    "tier": "Hunter Pro Beacon and findings",
+    "description": "Fires Beacon-armed SSRF payload shapes into a chosen parameter and promotes confirmed callbacks to findings."
+  }
+]

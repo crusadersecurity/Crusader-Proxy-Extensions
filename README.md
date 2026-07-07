@@ -6,6 +6,10 @@ The `ext/` directory mirrors the public marketplace surface at `https://crusader
 
 Arbitrary plugins are still supported, but they are manual installs: users can preview/install any trusted raw URL or local `.js` file with the Crusader CLI or Extensions screen. Do not treat a local `plugins` folder as the marketplace.
 
+## Add to the marketplace
+
+To get an extension listed in the Crusader marketplace store, open an issue or pull request in this repository. Curated entries are reviewed here, then published under `https://crusaderproxy.com/ext/` with a source link back to the reviewed code.
+
 ## Install
 
 Preview before installing:
